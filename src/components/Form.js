@@ -13,10 +13,6 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
       id: Math.random() * 1000,
     };
     setTodos([...todos, newTodo]);
-    // setTodos([
-    //   ...todos,
-    //   { text: inputText, completed: false, id: Math.random() * 1000 },
-    // ]);
     localStorage.setItem("localTasks", JSON.stringify([...todos, newTodo]));
     setInputText("");
     // console.log(setInputText);
@@ -35,13 +31,13 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
       </button>
 
       {/* DROPOWN FILTER HERE  */}
-      <div className="select">
+      {/* <div className="select">
         <select name="todos" className="filter-todo">
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="uncompleted">Uncompleted</option>
         </select>
-      </div>
+      </div> */}
     </form>
   );
 };

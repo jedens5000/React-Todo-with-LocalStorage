@@ -1,25 +1,20 @@
 import React from "react";
 
 const Todo = ({ text, todo, todos, setTodos, data, setData }) => {
-  // Event Handler
   const deleteHandler = () => {
-    const deleted = todos.filter((el) => el.id !== todo.id);
+    const deleted = todos.filter((item) => item.id !== todo.id);
     setTodos(deleted);
-    // setTodos(todos.filter((el) => el.id !== todo.id));
     localStorage.setItem("localTasks", JSON.stringify(deleted));
   };
   const completeHandler = () => {
-    setTodos(
-      todos.map((item) => {
-        if (item.id === todo.id) {
-          return {
-            ...item,
-            completed: !item.completed,
-          };
-        }
-        return item;
-      })
-    );
+    const completed = todos.map((item) => {
+      if (item.id === todo.id) {
+        item.completed = !item.completed;
+      }
+      return item;
+    });
+    setTodos(completed);
+    localStorage.setItem("localTasks", JSON.stringify(completed));
   };
 
   return (

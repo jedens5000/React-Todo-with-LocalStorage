@@ -15,14 +15,8 @@ const TodoList = ({ todos, setTodos }) => {
   useEffect(() => {
     if (localStorage.getItem("localTasks")) {
       const storedList = JSON.parse(localStorage.getItem("localTasks"));
-      // setTodos(JSON.parse(localStorage.getItem("localTasks")));
       setTodos(storedList);
     }
-    // fetch("https://jsonplaceholder.typicode.com/users/1/todos?_limit=5")
-    //   .then((response) => response.json()) //<--this converts to JSON
-    //   .then((todos) => {
-    //     setTodos(todos);
-    //   });
   }, []);
   /////////////END FETCH/////////////////////////
 

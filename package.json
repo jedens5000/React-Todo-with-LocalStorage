@@ -1,5 +1,6 @@
 {
   "name": "react-todo-localstorage",
+  "homepage": "https://jonedens.com/projects/todo/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

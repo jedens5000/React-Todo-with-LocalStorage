@@ -43,6 +43,9 @@ form button:hover {
   justify-content: center;
   align-items: center;
 }
+.todo-input {
+  width: fit-content;
+}
 
 .todo-list {
   min-width: 30%;
@@ -145,8 +148,7 @@ select {
   pointer-events: none;
 }
 /* Transition */
-/*
+
 .select:hover::after {
   transform: scale(1.5);
 }
-*/

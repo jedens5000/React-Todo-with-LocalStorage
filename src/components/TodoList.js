@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Todo from "./Todo";
 
-const TodoList = ({ todos, setTodos }) => {
+const TodoList = ({ todos, setTodos, filteredTodos }) => {
   //////////////API FETCH//////////////////////////
   // useEffect(() => {
   //   fetch("https://jsonplaceholder.typicode.com/users/1/todos?_limit=5")
@@ -23,7 +23,7 @@ const TodoList = ({ todos, setTodos }) => {
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        {todos.map((todo) => (
+        {filteredTodos.map((todo) => (
           <Todo
             key={todo.id}
             setTodos={setTodos}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ setInputText, todos, setTodos, inputText }) => {
+const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
   const inputTextHandler = (e) => {
     console.log(e.target.value);
     setInputText(e.target.value);
@@ -15,7 +15,11 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
     setTodos([...todos, newTodo]);
     localStorage.setItem("localTasks", JSON.stringify([...todos, newTodo]));
     setInputText("");
-    // console.log(setInputText);
+  };
+  // console.log(setInputText);
+  // statusHandler handles the filter change
+  const statusHandler = (e) => {
+    setStatus(e.target.value);
   };
   return (
     <form>
@@ -31,13 +35,13 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
       </button>
 
       {/* DROPOWN FILTER HERE  */}
-      {/* <div className="select">
-        <select name="todos" className="filter-todo">
+      <div className="select">
+        <select onChange={statusHandler} name="todos" className="filter-todo">
           <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
+          <option value="completed">Finished</option>
+          <option value="uncompleted">Pending</option>
         </select>
-      </div> */}
+      </div>
     </form>
   );
 };

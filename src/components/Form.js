@@ -22,27 +22,35 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     setStatus(e.target.value);
   };
   return (
-    <form>
-      <input
-        value={inputText}
-        onChange={inputTextHandler}
-        type="text"
-        placeholder="enter task"
-        className="todo-input"
-      />
-      <button onClick={submitTodoHandler} className="todo-button" type="submit">
-        <i className="fas fa-plus-square"></i>
-      </button>
+    <>
+      <form>
+        <input
+          value={inputText}
+          onChange={inputTextHandler}
+          type="text"
+          placeholder="enter task"
+          className="todo-input"
+        />
+        <button
+          onClick={submitTodoHandler}
+          className="todo-button"
+          type="submit"
+        >
+          <i className="fas fa-plus-square"></i>
+        </button>
+      </form>
 
-      {/* DROPOWN FILTER HERE  */}
+      {/* DROPOWN FILTER HERE   */}
+      {/* <form> */}
       <div className="select">
         <select onChange={statusHandler} name="todos" className="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Finished</option>
-          <option value="uncompleted">Pending</option>
+          <option value="all">All Tasks</option>
+          <option value="completed">Finished Tasks</option>
+          <option value="uncompleted">Pending Tasks</option>
         </select>
       </div>
-    </form>
+      {/* </form> */}
+    </>
   );
 };
 

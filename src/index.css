@@ -11,12 +11,12 @@ body {
   min-height: 100vh;
 }
 header {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 header,
 form {
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +44,9 @@ form button:hover {
   align-items: center;
 }
 .todo-input {
-  width: fit-content;
+  min-width: 20%;
+  max-width: 80%;
+  margin: 0.5rem;
 }
 
 .todo-list {
@@ -67,9 +69,7 @@ form button:hover {
   align-items: center;
   transition: all 1s ease;
 }
-.filter-todo {
-  padding: 1rem;
-}
+
 .todo li {
   flex: 1;
 }
@@ -94,14 +94,6 @@ form button:hover {
 .fa-check {
   pointer-events: none;
 }
-/* CAN REMOVE THESE */
-/* .fa-trash {
-  display: hidden !important;
-} */
-
-/* .fa-trash:hover {
-  display: block;
-} */
 
 .fall {
   transform: translateY(10rem) rotateZ(20deg);
@@ -113,42 +105,49 @@ form button:hover {
   opacity: 0.5;
 }
 
-/* Custom Select for Dropdown filter*/
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background-image: none;
+/******** Dropdown filter*********/
+.filter-todo {
+  padding: 0.75rem;
 }
 
-.select {
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
-}
 select {
   color: #ff6f47;
   font-family: "Poppins", sans-serif;
+  font-size: 1rem;
   cursor: pointer;
   width: 12rem;
+  outline: 0;
+  border: 0 !important;
 }
-/* Arrow */
-.select::after {
+
+.select {
+  margin: 0 1rem 1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Dropdown Arrow */
+/* .select::after {
   content: "\25BC";
   position: absolute;
+  position: relative;
   top: 0;
   right: 0;
-  padding: 1rem;
+  padding: 0.75rem;
   background: #ff6f47;
   cursor: pointer;
   pointer-events: none;
-}
+} */
+
 /* Transition */
 
-.select:hover::after {
+/* .select:hover::after {
   transform: scale(1.5);
+} */
+@media (max-width: 300px) {
+  header {
+    font-size: 1rem;
+  }
 }

@@ -53,11 +53,6 @@ form button:hover {
   min-width: 30%;
   list-style: none;
 }
-/* NEW */
-.noTasks {
-  text-align: center;
-  color: black;
-}
 
 .todo {
   margin: 0.5rem;
@@ -95,11 +90,6 @@ form button:hover {
   pointer-events: none;
 }
 
-.fall {
-  transform: translateY(10rem) rotateZ(20deg);
-  opacity: 0;
-}
-
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
@@ -128,24 +118,7 @@ select {
   justify-content: center;
   align-items: center;
 }
-/* Dropdown Arrow */
-/* .select::after {
-  content: "\25BC";
-  position: absolute;
-  position: relative;
-  top: 0;
-  right: 0;
-  padding: 0.75rem;
-  background: #ff6f47;
-  cursor: pointer;
-  pointer-events: none;
-} */
 
-/* Transition */
-
-/* .select:hover::after {
-  transform: scale(1.5);
-} */
 @media (max-width: 300px) {
   header {
     font-size: 1rem;

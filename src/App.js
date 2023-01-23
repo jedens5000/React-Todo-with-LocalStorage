@@ -29,7 +29,7 @@ function App() {
   }, [todos, status]);
 
   return (
-    <div className="App">
+    <div>
       <header>
         <h1>My Todo List</h1>
       </header>

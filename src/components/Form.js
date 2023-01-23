@@ -31,11 +31,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
           placeholder="enter task"
           className="todo-input"
         />
-        <button
-          onClick={submitTodoHandler}
-          className="todo-button"
-          type="submit"
-        >
+        <button onClick={submitTodoHandler} type="submit">
           <i className="fas fa-plus-square"></i>
         </button>
       </form>
